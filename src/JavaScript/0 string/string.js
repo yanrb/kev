@@ -5,6 +5,31 @@
       INPUT    "hxllo therx kxvin"
       OUTPUT   "hello there kevin"
  */
+
+ /*
 export const replaceAllXChars = (str) => {
    return "TO DO";
 };
+*/
+
+export const replaceAllXChars = (str) => {
+
+   let changeX = "";
+   for(let i = 0 ; str.length < i; i++){
+      if(str.charAt(i) === 'x'){
+      changeX += 'e';
+   }else{
+      changeX += str.charAt(i);
+   };
+
+};
+
+return(changeX);
+};
+
+/*
+export const replaceAllXChars = (str) => {
+   return str.replace(/x/g, 'e');
+}
+
+*/
