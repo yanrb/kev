@@ -12,6 +12,8 @@ export const replaceAllXChars = (str) => {
 };
 */
 
+//For loop
+
 export const replaceAllXChars = (str) => {
 
    let changeX = "";
@@ -23,13 +25,14 @@ export const replaceAllXChars = (str) => {
    };
 
 };
-
+  
 return(changeX);
 };
 
-/*
+
+//Using replace()
+
 export const replaceAllXChars = (str) => {
    return str.replace(/x/g, 'e');
 }
 
-*/
