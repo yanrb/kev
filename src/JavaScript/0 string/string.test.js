@@ -9,6 +9,7 @@ test('TEST #1: replaceAllXChars', () => {
    expect(replaceAllXChars("hxllo therx kxvin")).toBe("hello there kevin");
 });
 
+// ==== hasUniqueCharacters
 
 test('TEST #1: hasUniqueCharacters', () => {
    expect(hasUniqueCharacters("asdfg")).toBe(true);

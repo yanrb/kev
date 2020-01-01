@@ -22,9 +22,8 @@ export const replaceAllXChars = (str) => {
          changeX += 'e';
       } else {
          changeX += str.charAt(i);
-      }
-   }
-
+      ;}
+   };
    return changeX;
 };
 
@@ -39,8 +38,19 @@ export const replaceAllXChars = (str) => {
       OUTPUT   true
  */
 export const hasUniqueCharacters = (str) => {
-   // === CODE HERE ===
-};
+   
+   let status = true; 
+   for (let i = 0; i < str.length; i++){
+      for(let x = i+1; x < str.length; x++){
+         if(str[i] == str[x]){
+            status = false;
+         };
+       };
+      };
+      return status;
+   };
+
+
 
 
 /*
@@ -85,3 +95,4 @@ export const isPalindrome = (str) => {
 export const formatToCurrency = (str) => {
    // === CODE HERE ===
 };
+
