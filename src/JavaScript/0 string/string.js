@@ -37,6 +37,7 @@ export const replaceAllXChars = (str) => {
       INPUT    abc
       OUTPUT   true
  */
+
 export const hasUniqueCharacters = (str) => {
    
    let status = true; 
@@ -51,8 +52,6 @@ export const hasUniqueCharacters = (str) => {
    };
 
 
-
-
 /*
    Determine if a string is a palindrome
    Return TRUE if it is. Otherwise, return FALSE
@@ -60,9 +59,24 @@ export const hasUniqueCharacters = (str) => {
    Palindrome: a word, phrase, or sequence that reads the same backward as forward
       e.g., "madam" or "nurses run"
  */
+
 export const isPalindrome = (str) => {
-   // === CODE HERE ===
-};
+
+   let reverseStr = '';
+   let forwardStr = str;
+   let status = true;
+
+   for(let i = str.length -1; i>=0; i--){
+      reverseStr += str[i];
+   };
+   if(forwardStr === reverseStr){
+      return status;
+   }else{
+      status = false;
+      return status;
+      };;
+   }
+
 
 
 /*
@@ -93,6 +107,8 @@ export const isPalindrome = (str) => {
 
  */
 export const formatToCurrency = (str) => {
+
+
    // === CODE HERE ===
 };
 
