@@ -71,7 +71,7 @@ test('TEST #2: isPalindrome', () => {
 });
 
 test('TEST #3: formatToCurrency', () => {
-   expect(formatToCurrency("0000040")).toBe("$0.040");
+   expect(formatToCurrency("0000040")).toBe("$0.40");
 });
 
 test('TEST #4: formatToCurrency', () => {
