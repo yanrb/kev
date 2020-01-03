@@ -108,38 +108,17 @@ export const isPalindrome = (str) => {
  */
 export const formatToCurrency = (str) => {
 
-
-   //define array of numbers
-   //define length of array
-
-   //create for loop to loop through str indexes
-   //create for loop to loop through numbers array indexes
-   //if statement to compare str index against array index
-   //if statement match with array index, take index and + into new  variable
-
-   //new variable and count to end of index - 2 indexes and add in "."
-   //move to index 0 insert "$"
-
-
-
-  let oldStr = str;
-  let onlyNumbers = '';
-  let numbers =["1", "2","3", "4", "5", "6", "7", "8", "9", "0", "."]
-  let numbersLength = numbers.length;
-
-   for(let i = 0; i <= str.length; i++)
-      for(let n = 0; n <= numbersLength; n++){
-         if(str[i] === numbers[n]){
-            onlyNumbers += str[i];
-         }
-      
-      }
-      console.log(onlyNumbers);
-   }
+   //Remove letters and characters from screen
+   let nStr = str.replace(/\D/g, '');
+   let formattedStr = (nStr = '$' + (nStr / 100).toFixed(2));
    
+   //add comma
+      let splitStr = formattedStr.split(".");
+      splitStr[0] = splitStr[0].replace(/\B(?=(\d{3})+(?!\d))/g,",");
+      return splitStr.join(".");
+   
+  
 
-
-
-
-   // === CODE HERE ===
+   };
+   
 
