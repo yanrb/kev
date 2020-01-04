@@ -110,15 +110,15 @@ export const formatToCurrency = (str) => {
 
    //Remove letters and characters from screen
    let nStr = str.replace(/\D/g, '');
-   let formattedStr = (nStr = '$' + (nStr / 100).toFixed(2));
+
+   //Format adding $ sign and two 2 decimal places 
+   let formattedStr = nStr;    
+   formattedStr = '$' + (nStr / 100).toFixed(2);
    
    //add comma
       let splitStr = formattedStr.split(".");
       splitStr[0] = splitStr[0].replace(/\B(?=(\d{3})+(?!\d))/g,",");
       return splitStr.join(".");
-   
-  
-
    };
    
 
