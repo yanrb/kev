@@ -39,7 +39,7 @@ export const getLargestDivisorSubset = (arr) => {
 
 
 /*
-      Given a 2-dimensional array, find the maximum sum of columns
+      Given a 2-dimensional (NxN) array, find the maximum sum of columns
 
       EXAMPLE:
          INPUT
