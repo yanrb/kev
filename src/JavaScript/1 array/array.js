@@ -7,8 +7,8 @@
  */
 
 export const getPrimesUpTo = (max) => {
-  // ===== your code here =====
-   return [];
+   // ===== your code here =====
+   return []
 };
 
 /*
@@ -34,7 +34,7 @@ export const getPrimesUpTo = (max) => {
 
 export const getLargestDivisorSubset = (arr) => {
    // ===== your code here =====
-   return [];
+   return []
 };
 
 
@@ -43,12 +43,13 @@ export const getLargestDivisorSubset = (arr) => {
 
       EXAMPLE:
          INPUT
-            [[1, 2, 3],]
-            [[4, 5, 6],]
+            [[1, 2, 3],
+            [[4, 5, 6],
             [[7, 8, 9]]
 
          OUTPUT  9 + 6 + 3 = 18
  */
 export const maxSumCol = (twoDimArr) => {
-
+   // ===== your code here =====
+   return undefined;
 };
