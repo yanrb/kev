@@ -8,7 +8,7 @@
 
 export const getPrimesUpTo = (max) => {
    // ===== your code here =====
-   return []
+   return [];
 };
 
 /*
@@ -34,7 +34,7 @@ export const getPrimesUpTo = (max) => {
 
 export const getLargestDivisorSubset = (arr) => {
    // ===== your code here =====
-   return []
+   return [];
 };
 
 
