@@ -21,5 +21,5 @@ test('TEST #5: isOneOrZeroEditAway', () => {
 });
 
 test('TEST #6: isOneOrZeroEditAway', () => {
-   expect(isOneOrZeroEditAway("bryan", "chris")).toBe(true);
+   expect(isOneOrZeroEditAway("bryan", "chris")).toBe(false);
 });
