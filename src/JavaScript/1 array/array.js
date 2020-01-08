@@ -3,7 +3,7 @@
 
       EXAMPLE:
          INPUT    10
-         OUTPUT   [1, 2, 3, 5, 7]
+         OUTPUT   [2, 3, 5, 7]
  */
 
 export const getPrimesUpTo = (max) => {
@@ -15,7 +15,7 @@ export const getPrimesUpTo = (max) => {
    
    for(let i = 2; i <= x; i++){
       if(i===2){
-         primeNumbers.push(i);
+          primeNumbers.push(i);
       }
       if(i<2 || !(i%2)){
       }
@@ -25,7 +25,7 @@ export const getPrimesUpTo = (max) => {
    console.log(primeNumbers);
    }
 }
-
+   
    return primeNumbers;
 };
 
