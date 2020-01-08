@@ -24,7 +24,7 @@ export const getPrimesUpTo = (max) => {
          primeArr.push(n)
       }
    }
-   console.log(primeArr);
+   //console.log(primeArr);
    return primeArr;
 
 };
