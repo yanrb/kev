@@ -1,7 +1,7 @@
 import {
    getPrimesUpTo,
-   getLargestDivisorSubset,
-   maxSumCol
+  // getLargestDivisorSubset,
+   //maxSumCol
 } from "./array";
 
 // === getPrimesUpTo ===

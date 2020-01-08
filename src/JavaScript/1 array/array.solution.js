@@ -1,3 +1,5 @@
+/*
+
 export const getPrimesUpTo = (max) => {
    let primes = [];
 
@@ -60,3 +62,5 @@ export const maxSumCol = (twoDimArr) => {
 
    return Math.max(...colSums);
 };
+
+*/
