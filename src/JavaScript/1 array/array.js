@@ -46,10 +46,9 @@ export const getPrimesUpTo = (max) => {
 
 export const getSum = (arrInts) => {
    let sum = 0;
-   let aLength = arrInts.length - 1;
 
    //Pull each value of each index within the array
-   for(let i = 0; i<=aLength; i++){
+   for(let i = 0; i<=arrInts.length -1 ; i++){
    //add value and store into variable
       sum += arrInts[i];
    }
