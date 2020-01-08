@@ -1,8 +1,20 @@
 import {
+   getSum,
    getPrimesUpTo,
    getLargestDivisorSubset,
    maxSumCol
 } from "./array";
+
+// === getSum ===
+
+test('TEST #1: getSum', () => {
+   expect(getSum([1, 2, -3])).toBe(0);
+});
+
+test('TEST #2: getSum', () => {
+   expect(getSum([1, 2, 3, 69])).toBe(75);
+});
+
 
 // === getPrimesUpTo ===
 
