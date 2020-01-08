@@ -7,7 +7,6 @@
  */
 
 export const getPrimesUpTo = (max) => {
-
    let primeArr = [];
    //generate numbres 1 to MAX and store value in n
    for(let n = 1; n <= max-1; n ++){
@@ -44,9 +43,19 @@ export const getPrimesUpTo = (max) => {
 
 
  */
+
 export const getSum = (arrInts) => {
-   // ===== your code here =====
+   let sum = 0;
+   let aLength = arrInts.length - 1;
+
+   //Pull each value of each index within the array
+   for(let i = 0; i<=aLength; i++){
+   //add value and store into variable
+      sum += arrInts[i];
+   }
+   return sum;   
 };
+
 
 /*
       Given an array of strings, return an array of strings that contains the elements of the argument array that ends
