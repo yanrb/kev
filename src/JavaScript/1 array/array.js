@@ -8,26 +8,27 @@
 
 export const getPrimesUpTo = (max) => {
 
-   let x = max;
-   let primeNumbers = [];
-
-
-
-   for(let i = 2; i <= x; i++){
-      if(i===2){
-          primeNumbers.push(i);
+   let primeArr = [];
+   //generate numbres 1 to MAX and store value in n
+   for(let n = 1; n <= max; n ++){
+      let isPrime = true;
+   //Checks if n is prime
+      for(let i = 2; i < n; i++){
+         if (n%i === 0){
+            isPrime = false;
+            break;
+         }
       }
-      if(i<2 || !(i%2)){
+   //if isPrime is true pushes n into array
+      if(isPrime){
+         primeArr.push(n)
       }
-      if(x % i === 0){
-      }else{
-      primeNumbers.push(i);
-   console.log(primeNumbers);
    }
-}
-   
-   return primeNumbers;
+   //console.log(primeArr);
+   return primeArr;
+
 };
+
 
 /*
 
