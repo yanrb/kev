@@ -10,7 +10,7 @@ export const getPrimesUpTo = (max) => {
 
    let primeArr = [];
    //generate numbres 1 to MAX and store value in n
-   for(let n = 1; n <= max; n ++){
+   for(let n = 1; n <= max-1; n ++){
       let isPrime = true;
    //Checks if n is prime
       for(let i = 2; i < n; i++){
@@ -24,7 +24,7 @@ export const getPrimesUpTo = (max) => {
          primeArr.push(n)
       }
    }
-   //console.log(primeArr);
+   console.log(primeArr);
    return primeArr;
 
 };
