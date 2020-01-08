@@ -12,7 +12,7 @@ export const getPrimesUpTo = (max) => {
    let primeNumbers = [];
 
 
-   
+
    for(let i = 2; i <= x; i++){
       if(i===2){
           primeNumbers.push(i);
@@ -61,12 +61,13 @@ export const getLargestDivisorSubset = (arr) => {
 
       EXAMPLE:
          INPUT
-            [[1, 2, 3],]
-            [[4, 5, 6],]
+            [[1, 2, 3],
+            [[4, 5, 6],
             [[7, 8, 9]]
 
          OUTPUT  9 + 6 + 3 = 18
  */
 export const maxSumCol = (twoDimArr) => {
-
+   // ===== your code here =====
+   return undefined;
 };
