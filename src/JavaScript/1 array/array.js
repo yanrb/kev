@@ -7,8 +7,26 @@
  */
 
 export const getPrimesUpTo = (max) => {
-   // ===== your code here =====
-   return [];
+
+   let x = max;
+   let primeNumbers = [];
+
+
+
+   for(let i = 2; i <= x; i++){
+      if(i===2){
+         primeNumbers.push(i);
+      }
+      if(i<2 || !(i%2)){
+      }
+      if(x % i === 0){
+      }else{
+      primeNumbers.push(i);
+   console.log(primeNumbers);
+   }
+}
+
+   return primeNumbers;
 };
 
 /*
