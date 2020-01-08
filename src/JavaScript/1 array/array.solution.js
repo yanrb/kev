@@ -1,5 +1,15 @@
 /*
+      Some questions to ask yourself before you start:
+         1) What is a prime?
+         2) How do i determine if a number is a prime?
 
+
+     Start solving with a base case
+         Assuming that the argument max is >= 1
+
+
+
+ */
 export const getPrimesUpTo = (max) => {
    let primes = [];
 
