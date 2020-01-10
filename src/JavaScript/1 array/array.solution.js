@@ -32,6 +32,7 @@ export const getLargestDivisorSubset = (arr) => {
    const ascArr = arr.sort((a, b) => a - b);
 
    // iterate through each number of the sorted array
+
    for (const num of ascArr){
       let subsetsToAppend = [];
 
@@ -72,5 +73,3 @@ export const maxSumCol = (twoDimArr) => {
 
    return Math.max(...colSums);
 };
-
-*/

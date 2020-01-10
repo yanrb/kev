@@ -120,12 +120,27 @@ export const getIntersection = (arr1, arr2) => {
 /*
 
       Given an array arr[] of N integers, the task is to find the
-      largest subset of arr[] such that in every pair of numbers
+      largest subset in size of arr[] such that in every pair of numbers
       from that subset, one number is a divisor of the other.
 
       EXAMPLE:
          INPUT    arr= [1, 2, 3, 4, 5]
          OUTPUT   [1, 2, 4]
+
+         5 4 3 2 1
+
+
+         for i
+            num **
+
+            for j
+               for k
+
+         num = 3
+         [
+            [ 5 ],
+            [ 4 ],
+         ]
 
 
       the "%" is called the 'modulo' operator
@@ -136,10 +151,77 @@ export const getIntersection = (arr1, arr2) => {
          4 % 1 = 0
          2 % 1 = 0
 
+         5 4 3 2 1
+
  */
 
 export const getLargestDivisorSubset = (arr) => {
+
+   // sort the array in order (desc)
+
+   // iterate through the array one by one
+   // for the current number (bigger) check to see
+   //    IF divisible
+   //       push in with the current array
+   //
+   //    push the number by itself
+   //
    // ===== your code here =====
+
+
+   let sortAsc = arr.sort();
+   let subsets = [];
+
+   // sortAsc = [1,2,3,4]
+   for (let i = 0; i < sortAsc.length; ++i) {
+      const num = sortAsc[i];
+
+      let subsetsToAdd = [];
+
+      // we look for any existing subset where num
+      // is also divisible by all of the number
+      for (let j=0; j < subsets.length; ++j ){
+         let subset = subsets[j];
+
+         let isNumDivisibleByAllElemInSubset = true;
+         for(let k=0; k < subset.length; ++k){
+            const element = subset[k];
+
+            if (num % element !== 0) {
+               isNumDivisibleByAllElemInSubset = false;
+            }
+         }
+
+         if (isNumDivisibleByAllElemInSubset) {
+            const newSubset = [...subset, num];
+
+         }
+      }
+
+
+      // to check
+      if (subsetsToAdd.length > 0) {
+         subsets.push(...subsetsToAdd);
+      }
+
+      subsets.push([num])
+
+      // create a new subset with only num
+
+
+
+   }
+
+   // find the max length of a subset inside the array of subsets
+   const subsetLengths = subsets.map(subset => subset.length);
+   const maxSubsetLength = Math.max(...subsetLengths);
+
+   // find the subset with the max subset length
+   return subsets.find(subset => subset.length === maxSubsetLength);
+   // find the longest length subset and then return that
+
+
+
    return [];
 };
 
