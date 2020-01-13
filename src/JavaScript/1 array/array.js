@@ -25,7 +25,6 @@ export const getPrimesUpTo = (max) => {
    }
    //console.log(primeArr);
    return primeArr;
-
 };
 
 
@@ -74,7 +73,22 @@ export const getSum = (arrInts) => {
 
  */
 export const getNamesThatEndsWithAY = (arrStrs) => {
-   // ===== your code here =====
+
+   let status = true;
+   let yArr = [];
+
+   for(let i = 0; i < arrStrs.length; i++){
+      if(arrStrs[i].endsWith('y')){
+         let endsY = arrStrs[i];
+         if(endsY.endsWith('y')){
+            yArr.push(endsY);
+         }
+      }else{
+      status = false;
+      }
+   }
+   return yArr;
+
 };
 
 
@@ -134,6 +148,8 @@ export const getIntersection = (arr1, arr2) => {
       EXAMPLE:
          INPUT    arr= [1, 2, 3, 4, 5]
          OUTPUT   [1, 2, 4]
+         4
+         
 
 
       the "%" is called the 'modulo' operator
@@ -148,8 +164,22 @@ export const getIntersection = (arr1, arr2) => {
 
 export const getLargestDivisorSubset = (arr) => {
    // ===== your code here =====
+
+
+
+
+
    return [];
 };
+
+
+
+
+
+
+
+
+
 
 
 /*

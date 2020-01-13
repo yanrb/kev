@@ -73,4 +73,3 @@ export const maxSumCol = (twoDimArr) => {
    return Math.max(...colSums);
 };
 
-*/

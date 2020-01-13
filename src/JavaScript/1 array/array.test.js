@@ -2,7 +2,8 @@ import {
    getSum,
    getPrimesUpTo,
   // getLargestDivisorSubset,
-   //maxSumCol
+   //maxSumCol,
+   getNamesThatEndsWithAY,
 } from "./array";
 
 // === getSum ===
@@ -54,3 +55,21 @@ test('TEST #1: maxSumCol', () => {
    )).toBe(18);
 });
 
+// === getNamesThatEndsWithAY ===
+test('TEST #1: getNamesThatEndsWithAY', () => {
+   expect(getNamesThatEndsWithAY(
+      ["bryan", "why"]
+   )).toEqual(["why"]);
+});
+
+test('TEST #2: getNamesThatEndsWithAY', () => {
+   expect(getNamesThatEndsWithAY(
+      ["Bob", "roB", "keVin"]
+   )).toEqual([]);
+});
+
+test('TEST #3: getNamesThatEndsWithAY', () => {
+   expect(getNamesThatEndsWithAY(
+      ["Chris", "riley", "cHantay", "Megan", "stally"]
+   )).toEqual(["riley", "cHantay", "stally"]);
+});
