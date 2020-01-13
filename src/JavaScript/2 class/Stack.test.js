@@ -1,13 +1,36 @@
 import Stack from "./Stack";
 
-test('TEST #1: constructor, getSize', () => {
+test('TEST #1: constructor, getSize, isEmpty', () => {
    const stack = new Stack(69);
-   console.log(stack.getSize())
+   expect(stack.getSize()).toBe(69);
+   expect(stack.isEmpty()).toBe(true);
+});
 
+test('TEST #2: push pop', () => {
+   const stack = new Stack(3);
+   expect(stack.getSize()).toBe(3);
+   expect(stack.isEmpty()).toBe(true);
 
-   //
-   //
-   // expect(getSum([1, 2, -3])).toBe(0);
+   stack.push("hey");
+   expect(stack.peek()).toEqual("hey");
+   expect(stack.isEmpty()).toBe(false);
+});
+
+test('TEST #3: push pop', () => {
+   const stack = new Stack(1);
+   expect(stack.getSize()).toBe(1);
+   expect(stack.isEmpty()).toBe(true);
+
+   stack.push("boobies");
+   expect(stack.peek()).toEqual("boobies");
+   expect(stack.isEmpty()).toBe(false);
+
+   stack.push("straight");
+   expect(stack.peek()).toEqual("boobies");
+   expect(stack.isEmpty()).toBe(false);
+   expect(stack.pop()).toEqual("boobies");
+   expect(stack.isEmpty()).toBe(true);
+   expect(stack.pop()).toEqual(undefined);
 });
 
 /*
@@ -16,6 +39,5 @@ test('TEST #1: constructor, getSize', () => {
          peek()
          pop()
          push(item)
-
          constructor(size)
  */

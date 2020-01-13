@@ -24,8 +24,12 @@ class Stack {
       // ELSE push
 
       if (this.arr.length < this.stackSize) {
-         this.arr = this.arr + [item];
+         this.arr.push(item);
       }
+   }
+
+   getTopIndex() {
+      return this.arr.length - 1;
    }
 
    /*
@@ -36,17 +40,20 @@ class Stack {
          In this case, return undefined and keep stack empty
     */
    pop() {
-      // CASE: if empty
-
-
-
+      if (this.isEmpty()) {
+         return undefined;
+      }
+      const topIndex = this.getTopIndex();
+      const topValue = this.arr[topIndex];
+      this.arr = this.arr.slice(0, topIndex);
+      return topValue;
    }
 
    /*
          Returns top element of stack.
     */
    peek() {
-      const topIndex = this.arr.length - 1;
+      const topIndex = this.getTopIndex();
 
       // out of bounds
       if (topIndex < 0) {
@@ -60,16 +67,15 @@ class Stack {
          Returns true if stack is empty, else false.
     */
    isEmpty() {
-      const topIndex = this.arr.length - 1;
+      const topIndex = this.getTopIndex();
       return topIndex < 0;
    }
 
    /*
-
-         Returns the size of the Stack
+         Returns the size of the Stack -- the maximum amount of element the stack can have
     */
    getSize() {
-
+      return this.stackSize;
    }
 
 }
