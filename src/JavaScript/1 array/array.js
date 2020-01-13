@@ -7,6 +7,7 @@
  */
 
 export const getPrimesUpTo = (max) => {
+
    let primeArr = [];
    //generate numbres 1 to MAX and store value in n
    for(let n = 1; n <= max-1; n ++){
@@ -25,6 +26,7 @@ export const getPrimesUpTo = (max) => {
    }
    //console.log(primeArr);
    return primeArr;
+
 };
 
 
@@ -42,7 +44,6 @@ export const getPrimesUpTo = (max) => {
 
 
  */
-
 export const getSum = (arrInts) => {
    let sum = 0;
 
@@ -51,9 +52,8 @@ export const getSum = (arrInts) => {
    //add value and store into variable
       sum += arrInts[i];
    }
-   return sum;   
+   return sum;
 };
-
 
 /*
       Given an array of strings, return an array of strings that contains the elements of the argument array that ends
@@ -73,6 +73,7 @@ export const getSum = (arrInts) => {
 
  */
 export const getNamesThatEndsWithAY = (arrStrs) => {
+   // ===== your code here =====
 
    let yArr = [];
 
@@ -83,6 +84,8 @@ export const getNamesThatEndsWithAY = (arrStrs) => {
    }
    return yArr;
 };
+
+
 
 /*
       Given an array of integers and an integer multiplier, return a new array whose values are scaled by the multiplier
@@ -101,7 +104,7 @@ export const getNamesThatEndsWithAY = (arrStrs) => {
          OUTPUT            [27, 45, 63]
  */
 export const multiplyArrayElements = (arrInts, multiplier) => {
-   
+
    //create a for loop to pull each value of the array length
    //take each value within the array and multiply by the multiplier
    //push multiplied number into a new array
@@ -116,9 +119,6 @@ export const multiplyArrayElements = (arrInts, multiplier) => {
    return multipliedArr;
 };
 
-
-
-
 /*
       Given two arrays (arr1, arr2), get the Union of two arrays
       UNION (set theory): The union of two sets contains all the elements contained in either set (or both sets).
@@ -131,6 +131,7 @@ export const multiplyArrayElements = (arrInts, multiplier) => {
          INPUT
             arr1           ["red", "green", "blue"]
             arr2           ["red", "yellow", "blue"]
+
          OUTPUT            ["red"]
 
          EXAMPLE #2
@@ -158,25 +159,20 @@ export const getIntersection = (arr1, arr2) => {
 
    // console.log(newArr)
    // return newArr;
-   
+
 };
-
-
-
 
 
 
 /*
 
       Given an array arr[] of N integers, the task is to find the
-      largest subset of arr[] such that in every pair of numbers
+      largest subset in size of arr[] such that in every pair of numbers
       from that subset, one number is a divisor of the other.
 
       EXAMPLE:
          INPUT    arr= [1, 2, 3, 4, 5]
          OUTPUT   [1, 2, 4]
-         4
-         
 
 
       the "%" is called the 'modulo' operator
@@ -190,12 +186,74 @@ export const getIntersection = (arr1, arr2) => {
  */
 
 export const getLargestDivisorSubset = (arr) => {
+
+   // sort the array in order (desc)
+
+   // iterate through the array one by one
+   // for the current number (bigger) check to see
+   //    IF divisible
+   //       push in with the current array
+   //
+   //    push the number by itself
+   //
    // ===== your code here =====
+
+
+   let sortAsc = arr.sort();
+   let subsets = [];
+
+   // sortAsc = [1,2,3,4]
+   for (let i = 0; i < sortAsc.length; ++i) {
+      const num = sortAsc[i];
+
+      let subsetsToAdd = [];
+
+      // we look for any existing subset where num
+      // is also divisible by all of the number
+      for (let j=0; j < subsets.length; ++j ){
+         let subset = subsets[j];
+
+         let isNumDivisibleByAllElemInSubset = true;
+         for(let k=0; k < subset.length; ++k){
+            const element = subset[k];
+
+            if (num % element !== 0) {
+               isNumDivisibleByAllElemInSubset = false;
+            }
+         }
+
+         if (isNumDivisibleByAllElemInSubset) {
+            const newSubset = [...subset, num];
+
+         }
+      }
+
+
+      // to check
+      if (subsetsToAdd.length > 0) {
+         subsets.push(...subsetsToAdd);
+      }
+
+      subsets.push([num])
+
+      // create a new subset with only num
+
+
+
+   }
+
+   // find the max length of a subset inside the array of subsets
+   const subsetLengths = subsets.map(subset => subset.length);
+   const maxSubsetLength = Math.max(...subsetLengths);
+
+   // find the subset with the max subset length
+   return subsets.find(subset => subset.length === maxSubsetLength);
+   // find the longest length subset and then return that
+
 
 
    return [];
 };
-
 
 
 /*
@@ -210,7 +268,7 @@ export const getLargestDivisorSubset = (arr) => {
          OUTPUT  9 + 6 + 3 = 18
  */
 export const maxSumCol = (twoDimArr) => {
-   
+
    //look at the array as rows and columns
    //create for loop with i as rows
    //create for loop with j as columns
