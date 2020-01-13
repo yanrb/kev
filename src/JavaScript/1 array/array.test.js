@@ -2,8 +2,10 @@ import {
    getSum,
    getPrimesUpTo,
   // getLargestDivisorSubset,
-   //maxSumCol,
+   maxSumCol,
    getNamesThatEndsWithAY,
+   multiplyArrayElements,
+   //getIntersection,
 } from "./array";
 
 // === getSum ===
@@ -57,19 +59,32 @@ test('TEST #1: maxSumCol', () => {
 
 // === getNamesThatEndsWithAY ===
 test('TEST #1: getNamesThatEndsWithAY', () => {
-   expect(getNamesThatEndsWithAY(
-      ["bryan", "why"]
-   )).toEqual(["why"]);
+   expect(getNamesThatEndsWithAY(["bryan", "why"])).toEqual(["why"]);
 });
 
 test('TEST #2: getNamesThatEndsWithAY', () => {
-   expect(getNamesThatEndsWithAY(
-      ["Bob", "roB", "keVin"]
-   )).toEqual([]);
+   expect(getNamesThatEndsWithAY(["Bob", "roB", "keVin"])).toEqual([]);
 });
 
 test('TEST #3: getNamesThatEndsWithAY', () => {
-   expect(getNamesThatEndsWithAY(
-      ["Chris", "riley", "cHantay", "Megan", "stally"]
-   )).toEqual(["riley", "cHantay", "stally"]);
+   expect(getNamesThatEndsWithAY(["Chris", "riley", "cHantay", "Megan", "stally"])).toEqual(["riley", "cHantay", "stally"]);
+});
+
+// === multiplyArrayElements ===
+test('TEST #1: multiplyArrayElements', () => {
+   expect(multiplyArrayElements([1, 2, 3], 2)).toEqual([2, 4, 6]);
+});
+
+test('TEST #2: multiplyArrayElements', () => {
+   expect(multiplyArrayElements([3, 5, 7], 9)).toEqual([27, 45, 63]);
+});
+
+// === getIntersection ===
+test('TEST #1: getIntersection', () => {
+   expect(getIntersection(
+      [
+         ["red", "green", "blue"], 
+         ["red", "yellow", "blue"]
+      ]
+      )).toEqual(["red"]);
 });

@@ -74,24 +74,15 @@ export const getSum = (arrInts) => {
  */
 export const getNamesThatEndsWithAY = (arrStrs) => {
 
-   let status = true;
    let yArr = [];
 
    for(let i = 0; i < arrStrs.length; i++){
       if(arrStrs[i].endsWith('y')){
-         let endsY = arrStrs[i];
-         if(endsY.endsWith('y')){
-            yArr.push(endsY);
-         }
-      }else{
-      status = false;
+         yArr.push(arrStrs[i])
       }
    }
    return yArr;
-
 };
-
-
 
 /*
       Given an array of integers and an integer multiplier, return a new array whose values are scaled by the multiplier
@@ -110,8 +101,23 @@ export const getNamesThatEndsWithAY = (arrStrs) => {
          OUTPUT            [27, 45, 63]
  */
 export const multiplyArrayElements = (arrInts, multiplier) => {
-   // ===== your code here =====
+   
+   //create a for loop to pull each value of the array length
+   //take each value within the array and multiply by the multiplier
+   //push multiplied number into a new array
+
+   let multipliedArr = [];
+   let multipliedValue = 0;
+
+   for(let i = 0; i < arrInts.length; i++){
+      multipliedValue = arrInts[i] * multiplier
+      multipliedArr.push(multipliedValue)
+   }
+   return multipliedArr;
 };
+
+
+
 
 /*
       Given two arrays (arr1, arr2), get the Union of two arrays
@@ -134,8 +140,29 @@ export const multiplyArrayElements = (arrInts, multiplier) => {
          OUTPUT            [2, 3]
  */
 export const getIntersection = (arr1, arr2) => {
-   // ===== your code here =====
+
+   //create a new array to hold similar values
+   //create for loops for each array which pulls out array's value
+   //compare if the values in the array are similar
+   //if array value are similar push to a new array
+
+   // let newArr = [];
+
+   // for(let i = 0; i < arr1.length; i++){
+   //    for(let j = 0; j < arr2.length; j++){
+   //       if(arr1[i] === arr2[j]){
+   //          newArr.push(arr1[i])
+   //       }
+   //    }
+   // }
+
+   // console.log(newArr)
+   // return newArr;
+   
 };
+
+
+
 
 
 
@@ -166,19 +193,8 @@ export const getLargestDivisorSubset = (arr) => {
    // ===== your code here =====
 
 
-
-
-
    return [];
 };
-
-
-
-
-
-
-
-
 
 
 
@@ -194,6 +210,19 @@ export const getLargestDivisorSubset = (arr) => {
          OUTPUT  9 + 6 + 3 = 18
  */
 export const maxSumCol = (twoDimArr) => {
-   // ===== your code here =====
-   return undefined;
+   
+   //look at the array as rows and columns
+   //create for loop with i as rows
+   //create for loop with j as columns
+
+   let newArr = [];
+
+   for(let i = 0; i < twoDimArr.length; i++){
+      let sum = 0 ;
+      for(let j = 0; j < twoDimArr[i].length; j++){
+         sum += twoDimArr[j][i]
+      }
+      newArr.push(sum)
+   }
+   return Math.max.apply(Math, newArr);
 };
