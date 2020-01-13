@@ -24,7 +24,7 @@ export const getPrimesUpTo = (max) => {
          primeArr.push(n)
       }
    }
-   console.log(primeArr);
+   //console.log(primeArr);
    return primeArr;
 
 };
@@ -45,7 +45,14 @@ export const getPrimesUpTo = (max) => {
 
  */
 export const getSum = (arrInts) => {
-   // ===== your code here =====
+   let sum = 0;
+
+   //Pull each value of each index within the array
+   for(let i = 0; i<=arrInts.length -1 ; i++){
+   //add value and store into variable
+      sum += arrInts[i];
+   }
+   return sum;
 };
 
 /*
@@ -67,6 +74,15 @@ export const getSum = (arrInts) => {
  */
 export const getNamesThatEndsWithAY = (arrStrs) => {
    // ===== your code here =====
+
+   let yArr = [];
+
+   for(let i = 0; i < arrStrs.length; i++){
+      if(arrStrs[i].endsWith('y')){
+         yArr.push(arrStrs[i])
+      }
+   }
+   return yArr;
 };
 
 
@@ -88,7 +104,19 @@ export const getNamesThatEndsWithAY = (arrStrs) => {
          OUTPUT            [27, 45, 63]
  */
 export const multiplyArrayElements = (arrInts, multiplier) => {
-   // ===== your code here =====
+
+   //create a for loop to pull each value of the array length
+   //take each value within the array and multiply by the multiplier
+   //push multiplied number into a new array
+
+   let multipliedArr = [];
+   let multipliedValue = 0;
+
+   for(let i = 0; i < arrInts.length; i++){
+      multipliedValue = arrInts[i] * multiplier
+      multipliedArr.push(multipliedValue)
+   }
+   return multipliedArr;
 };
 
 /*
@@ -112,7 +140,25 @@ export const multiplyArrayElements = (arrInts, multiplier) => {
          OUTPUT            [2, 3]
  */
 export const getIntersection = (arr1, arr2) => {
-   // ===== your code here =====
+
+   //create a new array to hold similar values
+   //create for loops for each array which pulls out array's value
+   //compare if the values in the array are similar
+   //if array value are similar push to a new array
+
+   // let newArr = [];
+
+   // for(let i = 0; i < arr1.length; i++){
+   //    for(let j = 0; j < arr2.length; j++){
+   //       if(arr1[i] === arr2[j]){
+   //          newArr.push(arr1[i])
+   //       }
+   //    }
+   // }
+
+   // console.log(newArr)
+   // return newArr;
+
 };
 
 
@@ -127,21 +173,6 @@ export const getIntersection = (arr1, arr2) => {
          INPUT    arr= [1, 2, 3, 4, 5]
          OUTPUT   [1, 2, 4]
 
-         5 4 3 2 1
-
-
-         for i
-            num **
-
-            for j
-               for k
-
-         num = 3
-         [
-            [ 5 ],
-            [ 4 ],
-         ]
-
 
       the "%" is called the 'modulo' operator
          the modulo operation finds the remainder
@@ -150,8 +181,6 @@ export const getIntersection = (arr1, arr2) => {
          4 % 2 = 0
          4 % 1 = 0
          2 % 1 = 0
-
-         5 4 3 2 1
 
  */
 
@@ -238,6 +267,19 @@ export const getLargestDivisorSubset = (arr) => {
          OUTPUT  9 + 6 + 3 = 18
  */
 export const maxSumCol = (twoDimArr) => {
-   // ===== your code here =====
-   return undefined;
+
+   //look at the array as rows and columns
+   //create for loop with i as rows
+   //create for loop with j as columns
+
+   let newArr = [];
+
+   for(let i = 0; i < twoDimArr.length; i++){
+      let sum = 0 ;
+      for(let j = 0; j < twoDimArr[i].length; j++){
+         sum += twoDimArr[j][i]
+      }
+      newArr.push(sum)
+   }
+   return Math.max.apply(Math, newArr);
 };
