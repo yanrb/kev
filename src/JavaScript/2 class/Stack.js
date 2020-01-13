@@ -8,18 +8,15 @@
  */
 class Stack {
 
-   /*
-      YOUR CODE HERE
-    */
-
-   //    Where the size is the maximum number of elements that your stack can have
-   constructor(size) {
-
+   constructor() {
+      this.storage = {}
+      this.size = 0
    }
 
    // Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
    push(item) {
-
+      this.size++
+      this.storage[this.size] = item
    }
 
    /*
@@ -30,21 +27,32 @@ class Stack {
          In this case, return undefined and keep stack empty
     */
    pop() {
-
+      let remove = this.storage[this.size]
+      delete this.storage[this.size]
+      this.size--
+      return removed
    }
 
    /*
          Returns top element of stack.
     */
    peek() {
-
+      return this.storage[this.size]
    }
 
    /*
          Returns true if stack is empty, else false.
     */
    isEmpty() {
-
+      if(size === 0){
+         return true
+      }else{
+         return false
+      }
    }
-
 }
+
+const stack = new Stack()
+stack.push('table')
+stack.push('bed')
+stack.push('chair')
