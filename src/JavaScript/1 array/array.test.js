@@ -1,12 +1,14 @@
 import {
    getSum,
    getPrimesUpTo,
-  // getLargestDivisorSubset,
+   getLargestDivisorSubset,
    maxSumCol,
    getNamesThatEndsWithAY,
    multiplyArrayElements,
-   //getIntersection,
+   getIntersection,
 } from "./array";
+
+// import {getIntersection} from "./array.solution";
 
 // === getSum ===
 
@@ -82,9 +84,7 @@ test('TEST #2: multiplyArrayElements', () => {
 // === getIntersection ===
 test('TEST #1: getIntersection', () => {
    expect(getIntersection(
-      [
-         ["red", "green", "blue"], 
+         ["red", "green", "blue"],
          ["red", "yellow", "blue"]
-      ]
-      )).toEqual(["red"]);
+      )).toEqual(["red", "blue"]);
 });

@@ -131,6 +131,7 @@ export const multiplyArrayElements = (arrInts, multiplier) => {
          INPUT
             arr1           ["red", "green", "blue"]
             arr2           ["red", "yellow", "blue"]
+
          OUTPUT            ["red"]
 
          EXAMPLE #2

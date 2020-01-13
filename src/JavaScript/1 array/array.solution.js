@@ -74,3 +74,47 @@ export const maxSumCol = (twoDimArr) => {
    return Math.max(...colSums);
 };
 
+
+export const getIntersection = (arr1, arr2) => {
+   // ** Dictionary (aka map) is a data structure commonly used
+
+
+   // Create a dictionary counter for how many times an element occurs
+   // Create an intersection array that holds the intersection of the two arrays
+
+
+   // Loop through arr1 and count how many times each element occurs, using the dictionary
+
+   // Loop through arr2
+   // For element in arr2
+   //    if element occurs in arr1
+   //       subtract the count in the dictionary
+   //       add element in the intersection
+   //    else, ignore
+
+
+   let dict = {};
+   let intersection = [];
+
+   for (const element of arr1) {
+      if (dict[element]) {
+         dict[element] += 1;
+      } else {
+         dict[element] = 1
+      }
+   }
+
+   for (const element of arr2) {
+      if (dict[element] && dict[element] > 0) {
+         dict[element] -= 1;
+         intersection.push(element);
+      }
+   }
+
+   return intersection;
+};
+
+
+
+
+
