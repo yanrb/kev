@@ -28,9 +28,10 @@ test('TEST #3: push pop', () => {
    stack.push("straight");
    expect(stack.peek()).toEqual("straight");
    expect(stack.isEmpty()).toBe(false);
+   expect(stack.pop()).toEqual("straight");
+   expect(stack.isEmpty()).toBe(false);
    expect(stack.pop()).toEqual("boobies");
    expect(stack.isEmpty()).toBe(true);
-   expect(stack.pop()).toEqual(undefined);
 });
 
 /*

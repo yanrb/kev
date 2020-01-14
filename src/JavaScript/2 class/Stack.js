@@ -10,10 +10,11 @@ class Stack {
    storage = [];
    storageSize = 0;
 
-   topOfStorage = this.storage.length -1;
+   topOfStorage = this.storage[this.storage.length -1];
 
    constructor(size) {
       this.storageSize = size
+
    }
 
    // Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
@@ -21,7 +22,6 @@ class Stack {
    push(item) {
       if(this.storage.length <= this.storageSize){
          this.storage.push(item);
-         return this.storage[this.topOfStorage]
       }
    }
 
@@ -36,15 +36,16 @@ class Stack {
       if(this.storage.length === 0){
          return undefined;
       }
-      let removed = this.storage[this.topOfStorage]
-      return removed.splice(0, this.topOfStorage)
+      const topItem = this.storage[this.storage.length -1]
+      this.storage = this.storage.slice(0, this.storage.length -1)
+      return topItem;
    }
 
    /*
          Returns top element of stack.
     */
    peek() {
-      return this.storage[this.topOfStorage];
+      return this.storage[this.storage.length -1];
    }
 
    /*
@@ -66,8 +67,7 @@ class Stack {
    }
 }
 
-// const stack = new Stack(69);
-// console.log(stack);
+
 
 
 export default Stack;
