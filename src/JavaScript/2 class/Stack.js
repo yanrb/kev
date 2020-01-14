@@ -7,17 +7,22 @@
       Implement a Stack data structure
  */
 class Stack {
+   storage = [];
+   storageSize = 0;
 
-   constructor() {
-      this.storage = {}
-      this.size = 0
+   topOfStorage = this.storage.length -1;
+
+   constructor(size) {
+      this.storageSize = size
    }
 
    // Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
    // If full -- dont push more items
    push(item) {
-      this.size++
-      this.storage[this.size] = item
+      if(this.storage.length <= this.storageSize){
+         this.storage.push(item);
+         return this.storage[this.topOfStorage]
+      }
    }
 
    /*
@@ -28,37 +33,41 @@ class Stack {
          In this case, return undefined and keep stack empty
     */
    pop() {
-      let remove = this.storage[this.size]
-      delete this.storage[this.size]
-      this.size--
-      return removed
+      if(this.storage.length === 0){
+         return undefined;
+      }
+      let removed = this.storage[this.topOfStorage]
+      return removed.splice(0, this.topOfStorage)
    }
 
    /*
          Returns top element of stack.
     */
    peek() {
-      return this.storage[this.size]
+      return this.storage[this.topOfStorage];
    }
 
    /*
          Returns true if stack is empty, else false.
     */
    isEmpty() {
-      if(size === 0){
-         return true
+      if(this.storage.length === 0){
+         return true;
       }else{
-         return false
+         return false;
       }
    }
-}
 
    /*
          Returns the size of the Stack -- the maximum amount of element the stack can have
     */
    getSize() {
-
+      return this.storageSize;
    }
 }
+
+// const stack = new Stack(69);
+// console.log(stack);
+
 
 export default Stack;

@@ -147,18 +147,17 @@ export const getIntersection = (arr1, arr2) => {
    //compare if the values in the array are similar
    //if array value are similar push to a new array
 
-   // let newArr = [];
+   let newArr = [];
 
-   // for(let i = 0; i < arr1.length; i++){
-   //    for(let j = 0; j < arr2.length; j++){
-   //       if(arr1[i] === arr2[j]){
-   //          newArr.push(arr1[i])
-   //       }
-   //    }
-   // }
+   for(let i = 0; i < arr1.length; i++){
+      for(let j = 0; j < arr2.length; j++){
+         if(arr1[i] === arr2[j]){
+            newArr.push(arr1[i])
+         }
+      }
+   }
 
-   // console.log(newArr)
-   // return newArr;
+   return newArr;
 
 };
 
@@ -251,8 +250,6 @@ export const getLargestDivisorSubset = (arr) => {
    // find the longest length subset and then return that
 
 
-
-   return [];
 };
 
 

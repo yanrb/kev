@@ -1,4 +1,4 @@
-import Stack from "./Stack";
+import Stack from "./stack";
 
 test('TEST #1: constructor, getSize, isEmpty', () => {
    const stack = new Stack(69);
@@ -26,7 +26,7 @@ test('TEST #3: push pop', () => {
    expect(stack.isEmpty()).toBe(false);
 
    stack.push("straight");
-   expect(stack.peek()).toEqual("boobies");
+   expect(stack.peek()).toEqual("straight");
    expect(stack.isEmpty()).toBe(false);
    expect(stack.pop()).toEqual("boobies");
    expect(stack.isEmpty()).toBe(true);
