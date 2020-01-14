@@ -14,14 +14,17 @@ class Queue {
 
    //    Where the size is the maximum number of elements that your queue can have
    constructor(size) {
-
+      this.queueLine = []
+      this.first = 0
+      this.last = 0
    }
 
    /*
          adds item to the queue (where do you put the item on the queue)
     */
    enqueue(item) {
-
+      this.queueLine[this.last] = element
+      this.last++
    }
 
    /*
@@ -31,7 +34,10 @@ class Queue {
          Return undefined if empty
     */
    dequeue(){
-
+      let removed = this.queueLine[this.first]
+      delete this.queueLine[this.first]
+      this.first++
+      return removed
    }
 
 
@@ -40,7 +46,11 @@ class Queue {
          Return undefined if empty
     */
    peek(){
-
+      if(this.isEmpty()){
+         return "Queue is empty"
+      }else{
+         return this.queueLine[0]
+      }
    }
 
    /*
@@ -58,6 +68,11 @@ class Queue {
          Return TRUE if empty. Otherwise, return false
     */
    isEmpty() {
+      if(this.queueLine.length === 0){
+         return true
+      }else{
+         return false
+      }
 
    }
 
