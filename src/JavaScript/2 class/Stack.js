@@ -36,8 +36,8 @@ class Stack {
       if(this.storage.length === 0){
          return undefined;
       }
-      const topItem = this.storage[this.storage.length -1]
-      this.storage = this.storage.slice(0, this.storage.length -1)
+      const topItem = this.storage[this.storage.length -1];
+      this.storage = this.storage.slice(0, this.storage.length -1);
       return topItem;
    }
 
