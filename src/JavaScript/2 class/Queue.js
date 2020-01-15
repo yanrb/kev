@@ -3,20 +3,17 @@
 class Queue{
     constructor(){
         this.queueLine = []
-        this.first = 0
-        this.last = 0
     }
 
     enqueue(element){
-        this.queueLine[this.last] = element
-        this.last++
+        this.queueLine.push(element)
     }
 
     dequeue(){
-        let removed = this.queueLine[this.first]
-        delete this.queueLine[this.first]
-        this.first++
-        return removed
+        if(this.isEmpty()){
+        return "Queue is empty"
+        }
+        return this.queueLine.shift();
     }
 
     peek(){
@@ -35,3 +32,5 @@ class Queue{
         }
     }
 }
+
+export default Queue;
