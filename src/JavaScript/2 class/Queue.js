@@ -11,22 +11,21 @@
  */
 class Queue {
     queueLine = [];
-    queueSize = 0 ;
+    queueSize = 0;
 
    //    Where the size is the maximum number of elements that your queue can have
    constructor(size) {
         this.queueSize = size;
-   }
+   };
 
    /*
          adds item to the queue (where do you put the item on the queue)
     */
    enqueue(item) {
         if(this.queueLine.length < this.queueSize){
-            this.queueLine.push(item)
-        }
-
-   }
+            this.queueLine.push(item);
+        };
+   };
 
    /*
          remove an item from the queue (what item do you remove first in a queue?)
@@ -37,11 +36,11 @@ class Queue {
    dequeue(){
         if(this.queueLine.length === 0){
             return undefined;
-        }
+        };
         const firstItem = this.queueLine[0];
         this.queueLine.shift();
             return firstItem;
-   }
+   };
 
 
    /*
@@ -53,8 +52,8 @@ class Queue {
          return undefined;
       }else{
          return this.queueLine[0];
-      }
-   }
+      };
+   };
 
    /*
          Check if the queue is full
@@ -64,8 +63,8 @@ class Queue {
    isFull() {
         if(this.queueLine === this.queueSize){
             return "Queue is full.";
-        }
-   }
+        };
+   };
 
 
    /*
@@ -77,15 +76,15 @@ class Queue {
          return true;
       }else{
          return false;
-      }
-   }
+      };
+   };
 
    /*
          Returns the max capacity of elements of the queue
     */
    getSize() {
     return this.queueSize;
-   }
-}
+   };
+};
 
 export default Queue;
